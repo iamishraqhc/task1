@@ -20,7 +20,12 @@
     </tr>
     </thead>
     <tbody>
-    <tr th:each="movie : ${movies}"></tr>
+    <tr th:each="movie : ${movies}">
+        <td><img width="120" th:src="${movie.coverImage}"/></td>
+        <td th:text="${movie.title}"></td>
+        <td th:text="${movie.wonOscar}"></td>
+        <td th:text="${movie.year}"></td>
+    </tr>
     </tbody>
 </table>
 
